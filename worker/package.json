@@ -1,0 +1,19 @@
+{
+	"name": "r2-resumable-multipart-upload-worker",
+	"version": "0.0.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"build": "wrangler build",
+		"dev": "wrangler dev --port 8780",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"temporal-polyfill": "^0.3.0",
+		"typescript": "^5.0.0",
+		"wrangler": "^4.22.0"
+	}
+}

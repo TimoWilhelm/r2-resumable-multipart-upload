@@ -3,14 +3,10 @@
  * https://developers.cloudflare.com/workers/wrangler/configuration/
  */
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "r2-resumable-multipart-upload-app",
-	"main": ".svelte-kit/cloudflare/_worker.js",
+	"$schema": "../node_modules/wrangler/config-schema.json",
+	"name": "r2-resumable-multipart-upload-worker",
+	"main": "src/index.ts",
 	"compatibility_date": "2025-06-28",
-	"assets": {
-		"binding": "ASSETS",
-		"directory": ".svelte-kit/cloudflare"
-	},
 	"observability": {
 		"enabled": true
 	},
@@ -24,9 +20,14 @@
 		"bindings": [
 			{
 				"name": "DURABLE_UPLOAD",
-				"class_name": "Upload",
-				"script_name": "r2-resumable-multipart-upload-worker"
+				"class_name": "Upload"
 			}
 		]
-	}
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["Upload"]
+		}
+	]
 }
