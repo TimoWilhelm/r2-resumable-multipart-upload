@@ -20,14 +20,14 @@
 		"bindings": [
 			{
 				"name": "DURABLE_UPLOAD",
-				"class_name": "Upload"
+				"class_name": "DurableUpload"
 			}
 		]
 	},
 	"migrations": [
 		{
 			"tag": "v1",
-			"new_sqlite_classes": ["Upload"]
+			"new_sqlite_classes": ["DurableUpload"]
 		}
 	]
 }

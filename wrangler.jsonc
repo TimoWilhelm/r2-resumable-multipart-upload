@@ -24,7 +24,7 @@
 		"bindings": [
 			{
 				"name": "DURABLE_UPLOAD",
-				"class_name": "Upload",
+				"class_name": "DurableUpload",
 				"script_name": "r2-resumable-multipart-upload-worker"
 			}
 		]

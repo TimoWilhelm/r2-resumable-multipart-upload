@@ -15,7 +15,7 @@ interface UploadInfo {
 	expiration: number;
 }
 
-export class Upload extends DurableObject<Env> {
+export class DurableUpload extends DurableObject<Env> {
 	constructor(ctx: DurableObjectState, env: Env) {
 		super(ctx, env);
 	}
